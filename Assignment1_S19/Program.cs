@@ -71,16 +71,17 @@ namespace Assignment1_S19
 
             /*Method 6 : computeFrequency*/
             // Declare arr
-            int[] arr = new int[] { 1, 2, 3, 2, 2, 1, 3, 2};
+            int[] arr = new int[] { 1, 2, 3, 2, 2, 1, 3, 2 };
             // Passing array arr to method computeFrequency to computes the frequency of each element in the array
             computeFrequency(arr);
+            Console.ReadLine();
 
             // write your self-reflection here as a comment
             /*
             ---------------------------------------------------------------------------------------------------------------------------------------------------------
             ---------------------------------------------------------------------------------------------------------------------------------------------------------
             The assignment helps to develop familiarity with many essential programming constructs by introducing the use of variables, loops, arrays, method… 
-            which is a good starting point for any beginners who may want to get into application development later in their career. 
+            which is a good starting point for any beginners who may want to get into application development path later in their career. 
             It also is a good introduction of how C# programming language works with using Visual Studio as IDE. 
             Familiarity with GitHub is also another plus point of the assignment. 
             Even though the assignment is to focus on introductory structures, I found myself facing many challenges as well. 
@@ -400,14 +401,14 @@ namespace Assignment1_S19
                         // print out result set as long as fre[i] != 0
                         if (fre[i] != 0)
                         {
-                            Debug.WriteLine("{0}   {1} \n", a[i], fre[i]);
+                            Console.WriteLine("{0}   {1} \n", a[i], fre[i]);
                         } // end of if
                     } // end of for
                 } // end if if
                 // check if bad input, dislay message
                 else
                 {
-                    Debug.WriteLine("Please provide a valid input of array...");
+                    Console.WriteLine("Please provide a valid input of array...");
                 } // end of else
                 
             } // end of try
