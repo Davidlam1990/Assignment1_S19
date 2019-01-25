@@ -28,51 +28,68 @@ namespace Assignment1_S19
         // Main method
         public static void Main()
         {
-            ///*Method 1 : printPrimeNumbers*/
-            //// Declare variable a and b as starting and ending range.
-            //int a = 5, b = 15;
-            //// Passing a and b to method printPrimeNumbers to return all prime numbers between a and b
-            //printPrimeNumbers(a, b);
-            //Console.ReadLine();
+            /*Method 1 : printPrimeNumbers*/
+            // Declare variable a and b as starting and ending range.
+            int a = 5, b = 15;
+            // Passing a and b to method printPrimeNumbers to return all prime numbers between a and b
+            printPrimeNumbers(a, b);
+            Console.ReadLine();
 
-            ///*Method 2 : getSeriesResult*/
-            ////Declare variable n1 as number of terms of the series
-            //int n1 = 5;
-            ////Passing n1 to method getSeriesResult to calculate and store result to varible r1 with type double
-            //double r1 = getSeriesResult(n1);
-            ////Write out the result r1
-            //Console.WriteLine("The sum of the series is: " + r1);
-            //Console.ReadLine();
+            /*Method 2 : getSeriesResult*/
+            //Declare variable n1 as number of terms of the series
+            int n1 = 5;
+            //Passing n1 to method getSeriesResult to calculate and store result to varible r1 with type double
+            double r1 = getSeriesResult(n1);
+            //Write out the result r1
+            Console.WriteLine("The sum of the series is: " + r1);
+            Console.ReadLine();
 
-            ///*Method 3 : decimalToBinary*/
-            ////Declare variable n2 as decimail number (base 10) to be converted to binary (base 2)
-            //long n2 = 15;
-            ////Passing n2 to method decimalToBinary to convert to binary number and store result to r2
-            //long r2 = decimalToBinary(n2);
-            ////Write out the result r2
-            //Console.WriteLine("Binary conversion of the decimal number " + n2 + " is: " + r2);
-            //Console.ReadLine();
+            /*Method 3 : decimalToBinary*/
+            //Declare variable n2 as decimail number (base 10) to be converted to binary (base 2)
+            long n2 = 15;
+            //Passing n2 to method decimalToBinary to convert to binary number and store result to r2
+            long r2 = decimalToBinary(n2);
+            //Write out the result r2
+            Console.WriteLine("Binary conversion of the decimal number " + n2 + " is: " + r2);
+            Console.ReadLine();
 
-            ///*Method 4 : binaryToDecimal*/
-            ////Declare variable n3 as binary (base 2) to be converted to decimail number (base 10)
-            //long n3 = 1111;
-            ////Passing n3 to method binaryToDecimal to convert to decimal number and store result to r3
-            //long r3 = binaryToDecimal(n3);
-            ////Write out the result r3
-            //Console.WriteLine("Decimal conversion of the binary number " + n3 + " is: " + r3);
-            //Console.ReadLine();
+            /*Method 4 : binaryToDecimal*/
+            //Declare variable n3 as binary (base 2) to be converted to decimail number(base 10)
+            long n3 = 1111;
+            //Passing n3 to method binaryToDecimal to convert to decimal number and store result to r3
+            long r3 = binaryToDecimal(n3);
+            //Write out the result r3
+            Console.WriteLine("Decimal conversion of the binary number " + n3 + " is: " + r3);
+            Console.ReadLine();
 
-            ///*Method 5 : printTriangle*/
-            //// Declare variable n4 as number of lines for the pattern
-            //int n4 = 5;
-            //// Passing n4 to method printTriangle to dislay result 
-            //printTriangle(n4);
-            //Console.ReadLine();
+            /*Method 5 : printTriangle*/
+            // Declare variable n4 as number of lines for the pattern
+            int n4 = 5;
+            // Passing n4 to method printTriangle to dislay result 
+            printTriangle(n4);
+            Console.ReadLine();
 
-            int[] arr = new int[] { 1, 2, 3, 2, 2, 1, 3, 2 };
+            /*Method 6 : computeFrequency*/
+            // Declare arr
+            int[] arr = new int[] { 1, 2, 3, 2, 2, 1, 3, 2};
+            // Passing array arr to method computeFrequency to computes the frequency of each element in the array
             computeFrequency(arr);
 
             // write your self-reflection here as a comment
+            /*
+            ---------------------------------------------------------------------------------------------------------------------------------------------------------
+            ---------------------------------------------------------------------------------------------------------------------------------------------------------
+            The assignment helps to develop familiarity with many essential programming constructs by introducing the use of variables, loops, arrays, method… 
+            which is a good starting point for any beginners who may want to get into application development later in their career. 
+            It also is a good introduction of how C# programming language works with using Visual Studio as IDE. 
+            Familiarity with GitHub is also another plus point of the assignment. 
+            Even though the assignment is to focus on introductory structures, I found myself facing many challenges as well. 
+            The assignment is a good practice for problems solving and apply those logics into programming which is an important skill to have in IT industry. 
+            I think the assignment can be improved by providing more output solutions so that students can check their logic to make sure it’s doing what’s expected. 
+            Free method formats is also help for thinking outside the box. 
+            ---------------------------------------------------------------------------------------------------------------------------------------------------------
+            ---------------------------------------------------------------------------------------------------------------------------------------------------------
+            */
 
         } // end of Main method
 
@@ -83,8 +100,8 @@ namespace Assignment1_S19
             {
                 // Write your code here
                 // Prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself.    
-                // If the user provide a valid range and the starting range is not 1, then apply logic to find all prime numbers
-                if (x != 1 &&  x < y )
+                // If the user provide a valid range, then apply logic to find all prime numbers
+                if ( x < y)
                 {
                     // Iterate through the range between x and y using a For Loop
                     for (int i = x; i <= y; i++)
@@ -107,8 +124,8 @@ namespace Assignment1_S19
                             } // End of if
                         } // End of for
 
-                        // check if Prime != 2 , write out i as Prime number 
-                        if (Prime != 2)
+                        // check if Prime != 2 and i > 1, write out i as Prime number 
+                        if (Prime != 2 && i > 1)
                         {
                             Console.Write(i + " ");
                         } // End of if
@@ -121,8 +138,6 @@ namespace Assignment1_S19
                 else
                 {
                     Console.WriteLine("Please provide a valid range ...");
-                    Console.WriteLine("Press any key to exit the program and try again ...");
-                    Console.ReadKey(true);
                 } // End of else
             } // End of try
             // catch bad inputs
@@ -143,7 +158,7 @@ namespace Assignment1_S19
                 // Check if inputs are greater than 0 , then apply logic below
                 if(n > 0)
                 {
-                    // Initialize variables Odd_Sum = 0, Even_Sum = 0, Result = 0;
+                    // Initialize variables Odd_Sum = 0, Even_Sum = 0, total = 0;
                     double Odd_Sum = 0, Even_Sum = 0, total = 0;
                     //  Initialize Factorial = 1
                     int Factorial = 1;
@@ -320,7 +335,7 @@ namespace Assignment1_S19
                 // check if bad inputs, display the message 
                 else
                 {
-                    Console.WriteLine("Please provide a positive number !!!");
+                    Console.WriteLine("Please provide a positive number greater than 0 !!!");
                 } // End of else
 
             } // End of try
@@ -331,56 +346,77 @@ namespace Assignment1_S19
             } // End of catch
         } // End of printTriangle
 
+        /*Method computeFrequency*/
         public static void computeFrequency(int[] a)
         {
             try
             {
                 // Write your code here
-                int[] fre = new int[a.Length];
-                int i, j, count;
-
-                //initialize all element in fre array to -1
-                for (i = 0; i < a.Length; i++)
+                // Check if input array is not empty , then apply logic
+                if (a.Length > 0)
                 {
-                    fre[i] = -1;
-                }
+                    // This method computes the frequency of each element in the array
+                    // Declare arry fre with the size of arry a input to store the frequency of each element
+                    int[] fre = new int[a.Length];
+                    // Declare variable i , j, count for iterator and count
+                    int i, j, count;
 
-                for (i = 0; i < a.Length; i++)
-                {
-                    //fre[i] = -1; // do not work
-
-                    count = 1;
-
-                    for (j = i + 1; j < a.Length; j++)
+                    //initialize all element in fre array to -999
+                    for (i = 0; i < a.Length; i++)
                     {
-                        // Chech occurance to the right 
-                        if (a[i] == a[j]) // if match 
+                        fre[i] = -999;
+                    } // end of for
+
+                    // loop through from 0 to less than the size of array a using for loop
+                    for (i = 0; i < a.Length; i++)
+                    {
+                        // initially set count = 1
+                        count = 1;
+
+                        // loop through from 1 position to the right of i (i+1) in array a
+                        for (j = i + 1; j < a.Length; j++)
                         {
-                            count++;    // increase the count by 1 
-                            fre[j] = 0; // set value of that index in Array = 0 , which mean already count . 
+                            // Chech occurance to the right 
+                            // if match 
+                            if (a[i] == a[j])
+                            {
+                                // increase the count by 1 
+                                count++;
+                                // set value of that index in Array = 0 , which mean already count . 
+                                fre[j] = 0;
+                            } // end of if
                         }
-                    }
 
-                    // Assign total count for each element as long as they're not 0
-                    if (fre[i] != 0)
+                        // Assign total count for each element as long as they're not 0
+                        if (fre[i] != 0)
+                        {
+                            fre[i] = count;
+                        } // end of if
+                    } // end of for
+
+                    // print out result using for loop
+                    for (i = 0; i < a.Length; i++)
                     {
-                        fre[i] = count;
-                    }
-                }
-                // print out result
-                for (i = 0; i < a.Length; i++)
+                        // print out result set as long as fre[i] != 0
+                        if (fre[i] != 0)
+                        {
+                            Debug.WriteLine("{0}   {1} \n", a[i], fre[i]);
+                        } // end of if
+                    } // end of for
+                } // end if if
+                // check if bad input, dislay message
+                else
                 {
-                    if (fre[i] != 0)
-                    {
-                        Debug.WriteLine("{0}   {1} \n", a[i], fre[i]);
-                    }
-                }
-            }
+                    Debug.WriteLine("Please provide a valid input of array...");
+                } // end of else
+                
+            } // end of try
+            // catch bad inputs
             catch
             {
                 Console.WriteLine("Exception occured while computing computeFrequency()");
-            }
-        }
+            } // end of catch
+        } // end of computeFrequency
     } // end of class
 }  // end of namespace
 
